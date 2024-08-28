@@ -1,0 +1,21 @@
+h1 {padding: 3rem;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: green;
+    background-image: url(./ASSET/SFONDO.jpg);
+    height: 50px;
+    font-weight: 900;
+    font-size: 50px;
+    border-style: solid;
+}
+button {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(241, 245, 241);
+    background-color: lightgreen;
+    border-radius: 10px;
+    border-style: none;
+}
+label {font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    color: green;
+    font-size: 40px;
+}
