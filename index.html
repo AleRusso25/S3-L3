@@ -9,16 +9,14 @@
   <body>
     <h1>TO-DO LIST</h1>
 
-    <div class="container">
-      <div id="container2">
-        <form>
-          <label for="lista">LISTA</label>
-          <p></p>
-          <input type="text" placeholder="Aggiungi qui le cose da fare oggi" required />
-          <button id="addButton">INSERISCI</button>
-        </form>
-      </div>
-      <div id="tasks"></div>
+    <div id="container">
+      <label for="lista">LISTA</label>
+      <p></p>
+      <input id="task-input" type="text" placeholder="Aggiungi qui le cose da fare oggi" required />
+      <button id="task-button">INSERISCI</button>
+    </div>
+    <div>
+      <ol id="task-list"></ol>
     </div>
 
     <script src="./D8.js"></script>

@@ -1,40 +1,25 @@
-const handleSubmit = function (e) {
-  e.preventDefault();
-  addTask();
-  attachComplete();
-};
-
-const addTask = function () {
-  let tasks = document.querySelector("#tasks");
-  let inputField = document.querySelector("#container2 input");
-  let newTask = `
-      <div class="task">
-          <span id="taskname">
-              ${inputField.value}
-          </span>
-          <button class="delete">
-              <i class="far fa-trash-alt"></i>
-          </button>
-      </div>
-  `;
-  tasks.innerHTML += container2;
-  inputField.value = "";
-};
-
-const attachComplete = function () {
-  let allTasks = document.querySelectorAll(".task");
-  for (let i = 0; i < allTasks.length; i++) {
-    allTasks[i].addEventListener("click", function () {
-      this.classList.toggle("completed");
+const addButton = document.getElementById("task-button");
+const liMaker = function () {
+  const input = document.getElementById("task-input");
+  const inputValue = input.value;
+  if (inputValue !== " ") {
+    const li = document.createElement("li");
+    li.innerText = inputValue;
+    const delButton = document.createElement("button");
+    delButton.classList.add("task-delete");
+    delButton.innerText = "";
+    delButton.addEventListener("click", function () {
+      li.remove;
     });
+    li.appendChild(delButton);
+    li.addEventListener("click", function () {
+      li.classList.toggle("strike");
+    });
+    const ol = document.getElementById("task-list");
+    ol.appendChild(li);
+  } else {
+    alert("devi compilare il campo");
+    input.focus();
   }
 };
-
-const attachDelete = function () {
-  let allDeleteButtons = document.querySelectorAll(".delete");
-  for (let i = 0; i < allDeleteButtons.length; i++) {
-    allDeleteButtons[i].addEventListener("click", function () {
-      this.parentNode.remove();
-    });
-  }
-};
+addButton.addEventListener("click", liMaker);
