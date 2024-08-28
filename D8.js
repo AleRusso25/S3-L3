@@ -5,9 +5,15 @@ const liMaker = function () {
   if (inputValue !== " ") {
     const li = document.createElement("li");
     li.innerText = inputValue;
+    li.onclick = function (event) {
+      event.currentTarget.style.textDecoration = "line-through";
+    };
     const delButton = document.createElement("button");
     delButton.classList.add("task-delete");
-    delButton.innerText = "";
+    delButton.innerText = "🗑";
+    delButton.onclick = function (event) {
+      event.currentTarget.parentNode.remove();
+    };
     delButton.addEventListener("click", function () {
       li.remove;
     });

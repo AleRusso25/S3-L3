@@ -11,7 +11,7 @@ h1 {padding: 3rem;
 button {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgb(241, 245, 241);
-    background-color: lightgreen;
+    background-color: rgb(9, 7, 117);
     border-radius: 10px;
     border-style: none;
 }
